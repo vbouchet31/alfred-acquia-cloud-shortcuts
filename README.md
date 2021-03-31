@@ -49,6 +49,13 @@ this page is `https://cloud.acquia.com/a/applications/<uuid>`.
 The exhaustive list of properties which can be used is available on [Alfred
 documentation][alfred-json-doc]
 
+### Misc
+The workflow uses NodeJS in the background to fetch the data from Acquia Cloud
+API and process the commands.
+It assumes the NodeJS bin is part of the $PATH by loading `source ~/.bashrc`.
+If that is not the case, you may need to edit the 3 script filter steps and the
+"Run script" step to invoke the NodeJS bin in another way.
+
 ## Usage
 The only command is `ace `. It will automatically list the applications you can
 access. Start typing the first letters of an application to filter the list.
@@ -56,6 +63,23 @@ Press "Enter" to select the application. Next step is to select the environment
 or to choose the "Application overview" entry which will open the application
 page in the browser. The last step is to select which page (cron, logs, ...)
 for the selected environment you want to visit.
+
+## Contributing
+
+You can submit your bug reports or feature requests at:
+https://github.com/vbouchet31/alfred-acquia-cloud-shortcuts/issues
+
+If you want to submit a Pull Request, please follow these simple guides:
+
+1. Add a detailed description of what you're changing and why.
+2. Don't increase the version of the workflow in your changes.
+
+Here are some ideas for Pull Requests:
+
+- [ ] Replace usage of NodeJS by some MacOS built-in language
+- [ ] Enrich the list of pages
+- [ ] Improve the wording
+- [ ] Add support for ACSF applications
 
 [alfred-app]: https://www.alfredapp.com/
 [acquia-cloud]: https://cloud.acquia.com/
