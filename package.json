@@ -1,0 +1,16 @@
+{
+  "name": "alfred-acquia-cloud-shortcuts",
+  "version": "0.0.1",
+  "description": "Provides shortcuts to Acquia Cloud pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "merge-deep": "^3.0.3",
+    "qs": "^6.10.1"
+  }
+}
