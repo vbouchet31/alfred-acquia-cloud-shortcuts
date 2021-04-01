@@ -4,7 +4,7 @@ This is custom workflow for the [Alfred app][alfred-app] that lets you browse
 the applications and environments which you have access on [Acquia Cloud][acquia-cloud].
 It provides direct access to Acquia Cloud pages.
 
-## Authentication
+## Initial configuration
 You'll need to create and provide an API token. To generate a new token, follow
 the [official Acquia documentation][acquia-api-token-doc]
 To provide these values, click the [x] icon at the top-right of the workflow
@@ -17,7 +17,9 @@ screenshot.
 
 ![config step-2](docs/step2.png)
 
-## Configuration
+In a similar maner, you need to provide the PATH to the NodeJS executable. Because Alfred is executed outside of any context, it does not know about you $PATH variable. Simply open your terminal, run `which node` and copy the result into the node variable (in the same interface than client_id and client_secret).
+
+## Acquia Cloud data
 To avoid latency due to the fetching of data from Acquia Cloud API, the data
 are saved locally.
 To fetch the data (first time or refresh), use the `ace-refresh` command within
@@ -48,13 +50,6 @@ this page is `https://cloud.acquia.com/a/applications/<uuid>`.
 
 The exhaustive list of properties which can be used is available on [Alfred
 documentation][alfred-json-doc]
-
-### Misc
-The workflow uses NodeJS in the background to fetch the data from Acquia Cloud
-API and process the commands.
-It assumes the NodeJS bin is part of the $PATH by loading `source ~/.bashrc`.
-If that is not the case, you may need to edit the 3 script filter steps and the
-"Run script" step to invoke the NodeJS bin in another way.
 
 ## Usage
 The only command is `ace `. It will automatically list the applications you can
