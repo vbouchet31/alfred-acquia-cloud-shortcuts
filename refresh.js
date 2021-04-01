@@ -60,15 +60,7 @@ const getEnvironments = async function (uuid) {
       'Authorization': `Bearer ${ token }`
     }
   }).then(response => {
-    let envs = [{
-      'title': 'Environments overview page',
-  		'arg': '',
-  		'uid': uuid + '-overview',
-      'autocomplete': 'Environments overview page',
-  		'icon': {
-  			'path': './icons/stack.png'
-  		}
-    }]
+    let envs = []
     for (const env of response.data._embedded.items) {
       envs.push({
         'title': env.name,
